@@ -1,31 +1,44 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { compute, greet} from "./app.component";
 
 describe('AppComponent', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [
-        AppComponent
-      ],
-    }).compileComponents();
+
+  it('should return zero if input is negative. ', ()=> {
+    const result = compute(-1)
+    expect(result).toBe(0);
+  })
+
+  it('Should return plus one if number is positive', ()=>{
+    const result = compute(1)
+    expect(result).toBeTruthy()
+    expect(result).toBeGreaterThan(0)
+  })
+
+  it('should be greater than zero', function () {
+    const result = compute(5)
+    expect(result).toBeGreaterThan(0)
   });
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
-
-  it(`should have as title 'rickAndMory'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('rickAndMory');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('rickAndMory app is running!');
+  it('should be 2 if input is 1', function () {
+    const result = compute(1)
+    expect(result).toEqual(2)
   });
 });
+
+describe('Testing greed function ', ()=>{
+  it('should contain user name', ()=> {
+    const result = greet('Adam')
+    expect(result).toContain('Adam')
+  })
+
+  it('should contain deeply user name + welcome msg', ()=> {
+    const result = greet('Adam')
+    expect(result).toEqual('Welcome Adam')
+  })
+
+  it('value should be thurhy', ()=> {
+    const result = greet('Adam')
+    expect(result).toBeTruthy()
+  })
+})
