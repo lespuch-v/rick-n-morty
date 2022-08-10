@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {HttpClient} from "@angular/common/http";
+
 
 @Component({
   selector: 'app-root',
@@ -6,26 +8,33 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'rickAndMory';
-  isActive = true;
+  urlCharacters = 'https://rickandmortyapi.com/api/character';
+  urlLocations = 'https://rickandmortyapi.com/api/location';
+  urlEpisodes = 'https://rickandmortyapi.com/api/episode';
 
-  handleClick($event: Event){
-    console.log('Button was clicked!')
-    console.log($event)
+  activeFilterArray = [];
+
+  // Create several buttons with ID and these button will represent filters
+  // also create array with all the possible ID and filters and than you may render it with tructural directives
+  // IDs will be stored in the ARRAY
+  // If user clicks on the button filter will change and also URL
+
+  apiData: any;
+
+
+  getCharacterData() {
+    this.http.get(this.urlCharacters).subscribe(res => {
+      this.apiData = res;
+    });
   }
 
-  test($event: any){
-    console.log('test')
+  logData(){
+    console.log(this.apiData)
   }
 
-}
-export function compute(num: number){
-  if (num < 0) {
-    return 0
+
+  constructor(private http: HttpClient) {
+    this.getCharacterData()
   }
 
-  return num + 1
-}
-export function greet(name:string):string {
-  return 'Welcome ' + name
 }
