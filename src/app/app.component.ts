@@ -1,7 +1,6 @@
 import {Component} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -20,14 +19,8 @@ export class AppComponent {
   genderFilters = ['female', 'male', 'genderless', 'unknown'];
 
 
-  dataNames: any[] = []
-
-  // Create several buttons with ID and these button will represent filters
-  // also create array with all the possible ID and filters and than you may render it with tructural directives
-  // IDs will be stored in the ARRAY
-  // If user clicks on the button filter will change and also URL
-
   apiData: any;
+  results: any
   searchInput: string = "";
 
   constructor(private http: HttpClient) {
@@ -43,12 +36,10 @@ export class AppComponent {
   }
 
   getCharacterData() {
-    this.http.get(this.urlSearch).subscribe((res) => {
-      this.apiData = res;
+    this.http.get(this.urlSearch).subscribe(res => {
+      this.apiData = res
+      this.results = this.apiData.results
       console.log(this.apiData)
-      for (let i = 0; i < this.apiData.results.length; i++) {
-        this.dataNames.push(this.apiData.results[i].name)
-      }
     });
   }
 
