@@ -1,9 +1,58 @@
-.card-width{
-  width: 300px !important;
-}
+/*.card-width {*/
+/*  max-width: 280px !important;*/
+/*}*/
 
-img{
+img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
+
+.name-style {
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+
+.loc {
+  font-size: 0.8rem !important;
+}
+
+.id-style {
+  font-size: 0.9rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.badge-style {
+  color: white;
+  background-color: lightcoral;
+  width: 60px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  border-radius: 7px;
+  font-size: 0.8rem;
+  font-weight: bolder;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+}
+
+.badge-style {
+  background-color: grey;
+  background-size: 600% 600%;
+
+}
+
+
+.card-style {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+@media only screen and (max-width: 600px) {
+  .mine-mobile {
+    display: none !important;
+    background-color: red;
+  }
+}
+
