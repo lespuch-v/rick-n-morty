@@ -1,0 +1,249 @@
+<div class="container py-4">
+  <div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5">
+
+
+    </div>
+
+
+    <div class="parent">
+      <div class="div1">
+        <h1 class="display-5 fw-bold name-title">Rick and Morty</h1>
+        <p class="col-md-12 fs-4"><span class="names-characters">Rick and Morty</span> is a show created by <span
+          class="names-authors">Justin
+          Roiland
+          and Dan Harmon</span>, and it's based on
+          the characters Dr. Emmett Brown and Marty McFly in Back to the Future (1985). Rick is an alcoholic sociopath
+          and scientist. Morty is a dimwit grandson who takes on absurd adventures.</p>
+        <a class="btn btn-primary btn-lg d-flex justify-content-center" routerLink="/search" style="max-width: 270px">Search
+          characters!
+          <img [src]="rickLogo"
+               alt="rick and morty logo" style="width: 30px; margin-left: 10px"/>
+        </a>
+      </div>
+      <div class="div2">
+        <div class="main-image-container">
+          <img [src]="mainImage" alt="main rick and morty image" class="mainImage"/>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row align-items-md-stretch">
+    <h1>Where to watch</h1>
+    <div class="col-md-6">
+      <div class="h-100 p-5 text-bg-dark rounded-3 d-flex align-items-center">
+        <section>
+          <img [src]="netflixLogo" alt="netflix logo" class="company-logos mb-3">
+          <p>You can watch this amazing show on Netflix</p>
+          <a class="btn btn-outline-light p-2" href="https://www.netflix.com" type="button">Watch on Netflix <img
+            [src]="netflixLogoBTN" alt="netflix logo" style="max-width: 25px"/> </a>
+        </section>
+        <div class="container-left">
+          <img [src]="fuckU" alt="just rick doing rick things" class="img-fluid">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="h-100 p-5 bg-light border rounded-3 d-flex align-items-center">
+        <section>
+          <img [src]="hboLogo" alt="netflix logo" class="company-logos mb-3">
+          <p>You can watch this amazing show on HBO Max</p>
+          <a class="btn btn-outline-secondary p-2" href="https://www.hbomax.com/" type="button">Watch on HBO MAX <img
+            [src]="hboLogoBTN" alt="just a logo of hbo" style="max-width: 35px"> </a>
+        </section>
+        <div class="container-right">
+          <img [src]="mortyAndRick" alt="just rick doing rick things" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container py-5 pb-0" id="custom-cards">
+    <h2 class="pb-2 border-bottom">Main characters</h2>
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+             style="background-image: url('unsplash-photo-1.jpg');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Short title, long jacket</h2>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+                <img alt="Bootstrap" class="rounded-circle border border-white" height="32"
+                     src="https://github.com/twbs.png"
+                     width="32">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" height="1em" width="1em">
+                  <use xlink:href="#geo-fill"></use>
+                </svg>
+                <small>Earth</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" height="1em" width="1em">
+                  <use xlink:href="#calendar3"></use>
+                </svg>
+                <small>3d</small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+             style="background-image: url('unsplash-photo-2.jpg');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Much longer title that wraps to multiple lines</h2>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+                <img alt="Bootstrap" class="rounded-circle border border-white" height="32"
+                     src="https://github.com/twbs.png"
+                     width="32">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" height="1em" width="1em">
+                  <use xlink:href="#geo-fill"></use>
+                </svg>
+                <small>Pakistan</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" height="1em" width="1em">
+                  <use xlink:href="#calendar3"></use>
+                </svg>
+                <small>4d</small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+             style="background-image: url('unsplash-photo-3.jpg');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Another longer title belongs here</h2>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+                <img alt="Bootstrap" class="rounded-circle border border-white" height="32"
+                     src="https://github.com/twbs.png"
+                     width="32">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" height="1em" width="1em">
+                  <use xlink:href="#geo-fill"></use>
+                </svg>
+                <small>California</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" height="1em" width="1em">
+                  <use xlink:href="#calendar3"></use>
+                </svg>
+                <small>5d</small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+             style="background-image: url('unsplash-photo-1.jpg');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Short title, long jacket</h2>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+                <img alt="Bootstrap" class="rounded-circle border border-white" height="32"
+                     src="https://github.com/twbs.png"
+                     width="32">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" height="1em" width="1em">
+                  <use xlink:href="#geo-fill"></use>
+                </svg>
+                <small>Earth</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" height="1em" width="1em">
+                  <use xlink:href="#calendar3"></use>
+                </svg>
+                <small>3d</small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+             style="background-image: url('unsplash-photo-2.jpg');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Much longer title that wraps to multiple lines</h2>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+                <img alt="Bootstrap" class="rounded-circle border border-white" height="32"
+                     src="https://github.com/twbs.png"
+                     width="32">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" height="1em" width="1em">
+                  <use xlink:href="#geo-fill"></use>
+                </svg>
+                <small>Pakistan</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" height="1em" width="1em">
+                  <use xlink:href="#calendar3"></use>
+                </svg>
+                <small>4d</small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+             style="background-image: url('unsplash-photo-3.jpg');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Another longer title belongs here</h2>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+                <img alt="Bootstrap" class="rounded-circle border border-white" height="32"
+                     src="https://github.com/twbs.png"
+                     width="32">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" height="1em" width="1em">
+                  <use xlink:href="#geo-fill"></use>
+                </svg>
+                <small>California</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" height="1em" width="1em">
+                  <use xlink:href="#calendar3"></use>
+                </svg>
+                <small>5d</small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a class="nav-link px-2 text-muted" href="#" routerLink="/home">Home</a></li>
+        <li class="nav-item"><a class="nav-link px-2 text-muted" href="#">Search</a></li>
+        <li class="nav-item"><a class="nav-link px-2 text-muted" href="#">Features</a></li>
+        <li class="nav-item"><a class="nav-link px-2 text-muted" href="#">Where to watch?</a></li>
+        <li class="nav-item"><a class="nav-link px-2 text-muted" href="#">FAQs</a></li>
+        <li class="nav-item"><a class="nav-link px-2 text-muted" routerLink="/about">About</a></li>
+      </ul>
+      <p class="text-center text-muted">© 2022 Company, Inc</p>
+    </footer>
+  </div>
+</div>

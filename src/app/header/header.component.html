@@ -1,17 +1,19 @@
-<div class="container">
+<div class="container" style="max-width: 1100px;">
   <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-    <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none" href="/">
+    <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none" href="/"
+       routerLink="/main">
       <img [src]="shipLogo" alt="logo" class="img-fluid" style="width:70px; padding-right: 15px">
       <img [src]="headerLogo" alt="header-logo" class="img-fluid" style="width:150px; padding-right: 15px">
     </a>
 
     <ul class="nav nav-pills">
-      <li class="nav-item"><a aria-current="page" class="nav-link active search-btn css-selector" href="#">Search</a>
+      <li class="nav-item"><a aria-current="page" class="nav-link active search-btn css-selector" href="#"
+                              routerLink="/search">Search</a>
       </li>
       <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
       <li class="nav-item"><a class="nav-link" href="#">Where to watch?</a></li>
       <li class="nav-item"><a class="nav-link" href="#">FAQs</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="#" routerLink="/about">About</a></li>
     </ul>
   </header>
 </div>
