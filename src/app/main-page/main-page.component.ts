@@ -16,6 +16,9 @@ export class MainPageComponent implements OnInit {
   netflixLogoBTN: string = '/assets/images/logo/netflix-logo.png'
   hboLogoBTN: string = '/assets/images/logo/hbo-logo.png'
 
+  // Card images
+  cardImage_1 = '/assets/bg/633288.png'
+
   constructor() {
   }
 
