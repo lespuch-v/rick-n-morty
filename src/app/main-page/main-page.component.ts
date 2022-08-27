@@ -17,7 +17,12 @@ export class MainPageComponent implements OnInit {
   hboLogoBTN: string = '/assets/images/logo/hbo-logo.png'
 
   // Card images
-  cardImage_1 = '/assets/bg/633288.png'
+  cardImage_1 = '/assets/characters/rick.png'
+  cardImage_2 = '/assets/characters/Morty.jpg'
+  cardImage_3 = '/assets/characters/ship.jpg'
+  cardImage_4 = '/assets/characters/jerry-and-meeseeks.jpg'
+  cardImage_5 = '/assets/characters/pickle_rick.webp'
+  cardImage_6 = '/assets/characters/633216.jpg'
 
   constructor() {
   }
