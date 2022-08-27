@@ -5,6 +5,8 @@ import {AboutComponent} from "./about/about.component";
 import {HomeComponent} from "./home/home.component";
 import {SearchComponent} from "./search/search.component";
 import {MainPageComponent} from "./main-page/main-page.component";
+import {FeaturesComponent} from "./features/features.component";
+import {FaqComponent} from "./faq/faq.component";
 
 const routes: Routes = [
   {path: '', component: MainPageComponent},
@@ -12,6 +14,8 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'search', component: SearchComponent},
   {path: 'main', component: MainPageComponent},
+  {path: 'features', component: FeaturesComponent},
+  {path: 'faq', component: FaqComponent},
 ]
 
 @NgModule({

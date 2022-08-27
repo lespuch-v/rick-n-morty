@@ -11,6 +11,8 @@ import { SearchComponent } from './search/search.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AboutComponent } from './about/about.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import { FeaturesComponent } from './features/features.component';
+import { FaqComponent } from './faq/faq.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { MainPageComponent } from './main-page/main-page.component';
     SearchComponent,
     AboutComponent,
     MainPageComponent,
+    FeaturesComponent,
+    FaqComponent,
 
   ],
   imports: [
