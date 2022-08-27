@@ -14,11 +14,8 @@ export class SearchComponent implements OnInit {
   genderFilters = ['female', 'male', 'genderless', 'unknown'];
 
 
-  isStatusActive = false;
   selectedStatus = ''
-  isSpeciesActive = false;
   selectedSpecies = ''
-  isGenderActive = false;
   selectedGender = ''
 
   apiData: any;
@@ -45,39 +42,30 @@ export class SearchComponent implements OnInit {
   }
 
   getFilterStatus($event: any) {
-    this.isStatusActive = !this.isStatusActive
     this.selectedStatus = $event.target.id
     if (this.searchInput.length === 0) {
-      if (this.isStatusActive || this.isGenderActive || this.isSpeciesActive) {
-        this.urlSearch = `https://rickandmortyapi.com/api/character/?status=${$event.target.id}&species=${this.selectedSpecies}&gender=${this.selectedGender}`
-        this.getCharacterData()
-      }
+      this.urlSearch = `https://rickandmortyapi.com/api/character/?status=${$event.target.id}&species=${this.selectedSpecies}&gender=${this.selectedGender}`
+      this.getCharacterData()
     }
     this.urlSearch += `&status=${$event.target.id}`
     this.getCharacterData()
   }
 
   getFilterSpecies($event: any) {
-    this.isSpeciesActive = !this.isSpeciesActive
     this.selectedSpecies = $event.target.id
     if (this.searchInput.length === 0) {
-      if (this.isStatusActive || this.isGenderActive || this.isSpeciesActive) {
-        this.urlSearch = `https://rickandmortyapi.com/api/character/?species=${$event.target.id}&status=${this.selectedStatus}&gender=${this.selectedGender}`
-      }
+      this.urlSearch = `https://rickandmortyapi.com/api/character/?species=${$event.target.id}&status=${this.selectedStatus}&gender=${this.selectedGender}`
     }
     this.urlSearch += `&species=${$event.target.id}`
     this.getCharacterData()
   }
 
   getFilterGender($event: any) {
-    this.isGenderActive = !this.isGenderActive
     this.selectedGender = $event.target.id
 
     if (this.searchInput.length === 0) {
-      if (this.isStatusActive || this.isGenderActive || this.isSpeciesActive) {
-        this.urlSearch = `https://rickandmortyapi.com/api/character/?gender=${$event.target.id}&status=${this.selectedStatus}&species=${this.selectedSpecies}`
-        console.log(this.urlSearch)
-      }
+      this.urlSearch = `https://rickandmortyapi.com/api/character/?gender=${$event.target.id}&status=${this.selectedStatus}&species=${this.selectedSpecies}`
+      console.log(this.urlSearch)
     }
     this.urlSearch += `&gender=${$event.target.id}`
     this.getCharacterData()
@@ -94,9 +82,6 @@ export class SearchComponent implements OnInit {
     this.searchInput = ''
     this.urlSearch = ''
     this.results = null
-    this.isGenderActive = false
-    this.isStatusActive = false
-    this.isSpeciesActive = false
     this.selectedGender = ''
     this.selectedStatus = ''
     this.selectedSpecies = ''
