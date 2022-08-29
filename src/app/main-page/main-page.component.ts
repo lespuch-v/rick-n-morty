@@ -22,7 +22,8 @@ export class MainPageComponent implements OnInit {
   cardImage_3 = '/assets/characters/ship.jpg'
   cardImage_4 = '/assets/characters/jerry-and-meeseeks.jpg'
   cardImage_5 = '/assets/characters/pickle_rick.webp'
-  cardImage_6 = '/assets/characters/633216.jpg'
+  // cardImage_6 = '/assets/characters/633216.jpg'
+  cardImage_6 = '/assets/characters/beth.png'
 
   constructor() {
   }
