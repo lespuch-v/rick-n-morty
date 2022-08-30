@@ -21,6 +21,8 @@ export class SearchComponent implements OnInit {
   apiData: any;
   results: any
   searchInput: string = "";
+  errorMessage = '';
+  showError = false;
 
   constructor(private http: HttpClient) {
     // this.getCharacterData()
@@ -42,6 +44,7 @@ export class SearchComponent implements OnInit {
   }
 
   getFilterStatus($event: any) {
+    this.showError = false
     this.selectedStatus = $event.target.id
     if (this.searchInput.length === 0) {
       this.urlSearch = `https://rickandmortyapi.com/api/character/?status=${$event.target.id}&species=${this.selectedSpecies}&gender=${this.selectedGender}`
@@ -52,6 +55,7 @@ export class SearchComponent implements OnInit {
   }
 
   getFilterSpecies($event: any) {
+    this.showError = false
     this.selectedSpecies = $event.target.id
     if (this.searchInput.length === 0) {
       this.urlSearch = `https://rickandmortyapi.com/api/character/?species=${$event.target.id}&status=${this.selectedStatus}&gender=${this.selectedGender}`
@@ -61,8 +65,8 @@ export class SearchComponent implements OnInit {
   }
 
   getFilterGender($event: any) {
+    this.showError = false
     this.selectedGender = $event.target.id
-
     if (this.searchInput.length === 0) {
       this.urlSearch = `https://rickandmortyapi.com/api/character/?gender=${$event.target.id}&status=${this.selectedStatus}&species=${this.selectedSpecies}`
       console.log(this.urlSearch)
@@ -75,7 +79,17 @@ export class SearchComponent implements OnInit {
     this.http.get(this.urlSearch).subscribe(res => {
       this.apiData = res
       this.results = this.apiData.results
-    });
+    }, (error) => {
+      this.searchInput = ''
+      this.urlSearch = ''
+      this.results = null
+      this.selectedGender = ''
+      this.selectedStatus = ''
+      this.selectedSpecies = ''
+      this.errorMessage = error
+      this.showError = true
+      console.log(this.errorMessage)
+    })
   }
 
   clearData() {
@@ -85,8 +99,11 @@ export class SearchComponent implements OnInit {
     this.selectedGender = ''
     this.selectedStatus = ''
     this.selectedSpecies = ''
+    this.showError = false
   }
 
   // TODO: ADD FOOTER TO YOUR APP -- YOU ARE MISSING FOOTER
   // TODO: ADD CREAL DATA BUTTON INSTEAD OF GET DATA BUTTON!!!!!!!!!!
+  // TODO: add footer to all section of tha pages
+  // TODO: About page - works
 }

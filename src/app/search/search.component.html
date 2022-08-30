@@ -14,6 +14,7 @@
   <button (click)="clearData()" class="btn btn-secondary m-3">Clear Filter</button>
   <main class="d-flex">
 
+
     <div class="d-flex flex-column flex-shrink-0 p-3 bg-light mine-mobile" style="width: 280px;">
       <h4>Filters</h4>
       <div class="accordion" id="accordionExample">
@@ -67,6 +68,7 @@
       <hr>
       <small class="text-muted">Only <b>OR</b> many filter can be applied at the same time!</small>
     </div>
+
     <div>
       <div class="row mx-4 g-4">
         <div *ngFor="let element of results" class="col col-sm">
@@ -97,7 +99,18 @@
         </div>
       </div>
     </div>
-
+    <section *ngIf="showError" class="text-center">
+      <div class="card text-bg-primary text-center p-3">
+        <figure class="mb-0">
+          <blockquote class="blockquote">
+            <p>There are no characters based on your properties</p>
+          </blockquote>
+          <figcaption class="blockquote-footer mb-0 text-white">
+            Someone famous in <cite title="Source Title">Source Title</cite>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
   </main>
 </div>
 

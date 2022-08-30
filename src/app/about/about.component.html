@@ -1,1 +1,44 @@
-<h1>hello world</h1>
+<div class="modal modal-tour position-static d-block py-5" id="modalTour" role="dialog" tabindex="-1">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content rounded-4 shadow">
+      <div class="modal-body p-5">
+        <h2 class="fw-bold mb-0">Technology stack used to build this page</h2>
+
+        <ul class="d-grid gap-4 my-5 list-unstyled">
+          <li class="d-flex gap-4">
+            <img [src]="angularLogo" alt="" class="bi text-muted flex-shrink-0" style="width: 100px; height: 100px">
+            <div>
+              <h5 class="mb-0">Angular</h5>
+              Angular is a platform for building mobile and desktop web applications.
+            </div>
+          </li>
+          <li class="d-flex gap-4">
+            <img [src]="typescriptLogo" alt="" class="bi text-muted flex-shrink-0" style="width: 100px; height: 100px">
+            <div>
+              <h5 class="mb-0">Typescript</h5>
+              TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling
+              at any scale.
+            </div>
+          </li>
+          <li class="d-flex gap-4">
+            <img [src]="webstormLogo" alt="" class="bi text-muted flex-shrink-0" style="width: 100px; height: 100px">
+            <div>
+              <h5 class="mb-0">Webstorm</h5>
+              WebStorm is an integrated development environment for JavaScript and related technologies.
+            </div>
+          </li>
+          <li class="d-flex gap-4">
+            <img [src]="gitLogo" alt="" class="bi text-muted flex-shrink-0" style="width: 100px; height: 100px">
+            <div>
+              <h5 class="mb-0">GIT</h5>
+              Git is a free and open source distributed version control system designed to handle everything from small
+              to very large projects with speed and efficiency.
+            </div>
+          </li>
+        </ul>
+        <a class="btn btn-lg btn-primary mt-5 w-100" data-bs-dismiss="modal" routerLink="/main" type="button">Great,
+          thanks!</a>
+      </div>
+    </div>
+  </div>
+</div>
