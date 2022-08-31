@@ -33,10 +33,6 @@ export class SearchComponent implements OnInit {
     //Add 'implements OnInit' to the class.
   }
 
-
-  // TODO: REFACTOR THIS CODE
-
-  // Getting data from the input value and store the into searchInput
   logData($event: any) {
     this.searchInput = $event.target.value
     this.urlSearch = `https://rickandmortyapi.com/api/character/?name=${this.searchInput}`

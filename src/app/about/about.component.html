@@ -2,8 +2,8 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content rounded-4 shadow">
       <div class="modal-body p-5">
-        <h2 class="fw-bold mb-0">Technology stack used to build this page</h2>
-
+        <h2 [stepContent]="test" class="fw-bold mb-0" joyrideStep="info">Technology stack used to build this page</h2>
+        <ng-template #test>dddddddddd</ng-template>
         <ul class="d-grid gap-4 my-5 list-unstyled">
           <li class="d-flex gap-4">
             <img [src]="angularLogo" alt="" class="bi text-muted flex-shrink-0" style="width: 100px; height: 100px">
@@ -15,7 +15,7 @@
           <li class="d-flex gap-4">
             <img [src]="typescriptLogo" alt="" class="bi text-muted flex-shrink-0" style="width: 100px; height: 100px">
             <div>
-              <h5 class="mb-0">Typescript</h5>
+              <h5 class="mb-0" joyrideStep="step3">Typescript</h5>
               TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling
               at any scale.
             </div>
@@ -42,3 +42,4 @@
     </div>
   </div>
 </div>
+<app-footer></app-footer>

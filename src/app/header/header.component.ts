@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {JoyrideService} from "ngx-joyride";
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -10,9 +12,26 @@ export class HeaderComponent implements OnInit {
   shipLogo = '/assets/images/logo/ship.jpg'
   headerLogo = '/assets/images/logo/titleHeader.jpg'
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private joyrideService: JoyrideService, private router: Router) {
   }
 
+
+  startTour() {
+    this.joyrideService.startTour({
+      // steps: ['step1', 'step2', 'step3', 'step4', 'step5', 'step6', 'step7'],
+      steps: ["step1", "step2", "step3@about", "step4@search"],
+      themeColor: '#8d8d8d',
+      showCounter: true,
+      showPrevButton: true,
+      customTexts: {
+        prev: 'Back',
+        next: 'Next',
+        done: 'Done'
+      },
+    });
+
+  }
+
+  ngOnInit() {
+  }
 }

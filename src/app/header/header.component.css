@@ -62,3 +62,70 @@
     background-position: 79% 0%
   }
 }
+
+/* ------------------------------------------------------------------------ */
+.css-selector2 {
+  background: linear-gradient(218deg, #006eff, #e53333);
+  background-size: 400% 400%;
+  font-size: 1rem;
+  border-radius: 50%;
+  -webkit-animation: AnimationName 19s ease infinite;
+  -moz-animation: AnimationName 19s ease infinite;
+  animation: AnimationName 19s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 79% 0%
+  }
+  50% {
+    background-position: 22% 100%
+  }
+  100% {
+    background-position: 79% 0%
+  }
+}
+
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 79% 0%
+  }
+  50% {
+    background-position: 22% 100%
+  }
+  100% {
+    background-position: 79% 0%
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 79% 0%
+  }
+  50% {
+    background-position: 22% 100%
+  }
+  100% {
+    background-position: 79% 0%
+  }
+}
+
+.search-btn2 {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  background: linear-gradient(218deg, #ff8900, #bdc118, #414141, #414141);
+  background-size: 800% 800%;
+  font-weight: bolder;
+  color: #ffffff !important;
+  transition: all 50ms ease-in-out;
+}
+
+.search-btn2:hover {
+  transform: translateY(-3px);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset !important;
+}
+
+.search-btn2:active {
+  transform: translateY(3px);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset !important;
+  tranform: scale(0.95);
+}
