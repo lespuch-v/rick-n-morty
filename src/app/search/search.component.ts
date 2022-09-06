@@ -23,6 +23,7 @@ export class SearchComponent implements OnInit {
   searchInput: string = "";
   errorMessage = '';
   showError = false;
+  currentFilters = []
 
   constructor(private http: HttpClient) {
     // this.getCharacterData()
@@ -43,10 +44,10 @@ export class SearchComponent implements OnInit {
     this.showError = false
     this.selectedStatus = $event.target.id
     if (this.searchInput.length === 0) {
-      this.urlSearch = `https://rickandmortyapi.com/api/character/?status=${$event.target.id}&species=${this.selectedSpecies}&gender=${this.selectedGender}`
+      this.urlSearch = `https://rickandmortyapi.com/api/character/?status=${this.selectedStatus}&species=${this.selectedSpecies}&gender=${this.selectedGender}`
       this.getCharacterData()
     }
-    this.urlSearch += `&status=${$event.target.id}`
+    this.urlSearch = `https://rickandmortyapi.com/api/character/?name=${this.searchInput}&status=${$event.target.id}&species=${this.selectedSpecies}&gender=${this.selectedGender}`
     this.getCharacterData()
   }
 
@@ -56,7 +57,7 @@ export class SearchComponent implements OnInit {
     if (this.searchInput.length === 0) {
       this.urlSearch = `https://rickandmortyapi.com/api/character/?species=${$event.target.id}&status=${this.selectedStatus}&gender=${this.selectedGender}`
     }
-    this.urlSearch += `&species=${$event.target.id}`
+    this.urlSearch = `https://rickandmortyapi.com/api/character/?name=${this.searchInput}&status=${this.selectedStatus}&species=${$event.target.id}&gender=${this.selectedGender}`
     this.getCharacterData()
   }
 
@@ -67,7 +68,7 @@ export class SearchComponent implements OnInit {
       this.urlSearch = `https://rickandmortyapi.com/api/character/?gender=${$event.target.id}&status=${this.selectedStatus}&species=${this.selectedSpecies}`
       console.log(this.urlSearch)
     }
-    this.urlSearch += `&gender=${$event.target.id}`
+    this.urlSearch = `https://rickandmortyapi.com/api/character/?name=${this.searchInput}&status=${this.selectedStatus}&species=${this.selectedSpecies}&gender=${$event.target.id}`
     this.getCharacterData()
   }
 
