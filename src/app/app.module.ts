@@ -15,6 +15,7 @@ import {FeaturesComponent} from './features/features.component';
 import {FaqComponent} from './faq/faq.component';
 import {FooterComponent} from './footer/footer.component';
 import {JoyrideModule} from "ngx-joyride";
+import { ShipObjectComponent } from './ship-object/ship-object.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import {JoyrideModule} from "ngx-joyride";
     FeaturesComponent,
     FaqComponent,
     FooterComponent,
+    ShipObjectComponent,
 
   ],
   imports: [

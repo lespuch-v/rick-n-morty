@@ -127,3 +127,10 @@
 .main-shadow-two {
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
+
+.ship-container-test {
+  width: 600px !important;
+  height: 600px !important;
+  margin: 0 auto;
+  background-color: yellow;
+}

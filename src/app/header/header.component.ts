@@ -19,7 +19,7 @@ export class HeaderComponent implements OnInit {
   startTour() {
     this.joyrideService.startTour({
       // steps: ['step1', 'step2', 'step3', 'step4', 'step5', 'step6', 'step7'],
-      steps: ["step1", "step2", "step3@about", "step4@search"],
+      steps: ["step1", "step2", "step3@about", "step4@search", 'step5@main'],
       themeColor: '#8d8d8d',
       showCounter: true,
       showPrevButton: true,
@@ -29,6 +29,8 @@ export class HeaderComponent implements OnInit {
         done: 'Done'
       },
     });
+
+    this.joyrideService.closeTour();
 
   }
 

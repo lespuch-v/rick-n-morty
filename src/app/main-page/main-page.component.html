@@ -1,4 +1,10 @@
 <div class="container py-4">
+  <section style="overflow: auto">
+    <joyrideStep [stepContent]="joyContent5" joyrideStep="step5" stepPosition="center"></joyrideStep>
+    <ng-template #joyContent5>
+      <div><h1>Hello, this is your final step!</h1></div>
+    </ng-template>
+  </section>
   <div class="p-5 mb-4 bg-light rounded-3 main-shadow">
     <div class="parent">
       <div class="div1">
@@ -28,6 +34,9 @@
   </div>
 
   <div class="row align-items-md-stretch">
+    <div class="my-container">
+      <app-ship-object></app-ship-object>
+    </div>
     <h1 id="where-to-watch">Where to watch</h1>
     <div class="col-md-6">
       <div class="h-100 p-5 text-bg-dark rounded-3 d-flex align-items-center main-shadow-two">
