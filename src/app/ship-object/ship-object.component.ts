@@ -62,7 +62,7 @@ export class ShipObjectComponent implements OnInit {
     // Create the scene
     this.scene = new THREE.Scene();
     this.scene.background = new THREE.Color('#ffffff');
-    this.loaderGLTF.load('assets/model/ship.glb', (gltf: GLTF) => {
+    this.loaderGLTF.load('/assets/model/ship.glb', (gltf: GLTF) => {
       this.model = gltf.scene.children[0];
       var box = new THREE.Box3().setFromObject(this.model);
       box.getCenter(this.model.position);
