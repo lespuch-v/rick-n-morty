@@ -1,6 +1,7 @@
 # RickAndMory
 
 <h1>Rick and Morty</h1>
+
 ![page-2](https://user-images.githubusercontent.com/36127590/189541186-2ea7dde4-ce03-4728-8727-b4658cc9fec6.png)
 
 ![page-1](https://user-images.githubusercontent.com/36127590/189541188-e7e1f191-c6e1-45b7-83bd-88fbb04d8e92.png)
