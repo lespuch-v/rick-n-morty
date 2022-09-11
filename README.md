@@ -1,4 +1,4 @@
-# RickAndMory
+# RickAndMory - https://lespuch-v.github.io/rick-n-morty/
 
 ![page-2](https://user-images.githubusercontent.com/36127590/189541186-2ea7dde4-ce03-4728-8727-b4658cc9fec6.png)
 
