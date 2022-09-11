@@ -17,7 +17,7 @@ export class ShipObjectComponent implements OnInit {
   @Input() public rotationSpeedX: number = 0.05;
   @Input() public rotationSpeedY: number = 0.01;
   @Input() public size: number = 200;
-  @Input() public texture: string = '/assets/textures/stone/stone_wall_diff_2k.jpg';
+  @Input() public texture: string = 'assets/textures/stone/stone_wall_diff_2k.jpg';
   // Stage Properties and Methods (private)
   @Input() public cameraZ: number = 400;
   @Input() public fieldOfView: number = 1;
@@ -62,7 +62,7 @@ export class ShipObjectComponent implements OnInit {
     // Create the scene
     this.scene = new THREE.Scene();
     this.scene.background = new THREE.Color('#ffffff');
-    this.loaderGLTF.load('/assets/model/ship.glb', (gltf: GLTF) => {
+    this.loaderGLTF.load('assets/model/ship.glb', (gltf: GLTF) => {
       this.model = gltf.scene.children[0];
       var box = new THREE.Box3().setFromObject(this.model);
       box.getCenter(this.model.position);

@@ -6,10 +6,10 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  angularLogo = '/assets/icons/angular.png'
-  typescriptLogo = '/assets/icons/typescript.png'
-  webstormLogo = '/assets/icons/webstorm.png'
-  gitLogo = '/assets/icons/git.png'
+  angularLogo = 'assets/icons/angular.png'
+  typescriptLogo = 'assets/icons/typescript.png'
+  webstormLogo = 'assets/icons/webstorm.png'
+  gitLogo = 'assets/icons/git.png'
 
 
   constructor() {

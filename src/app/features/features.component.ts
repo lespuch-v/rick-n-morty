@@ -6,8 +6,8 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./features.component.css']
 })
 export class FeaturesComponent implements OnInit {
-  workInProgress = '/assets/icons/work.png'
-  cogImage = '/assets/icons/cog.png'
+  workInProgress = 'assets/icons/work.png'
+  cogImage = 'assets/icons/cog.png'
 
   constructor() {
   }

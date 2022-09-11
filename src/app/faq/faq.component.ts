@@ -6,7 +6,7 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./faq.component.css']
 })
 export class FaqComponent implements OnInit {
-  questionMarkLogo = '/assets/icons/question-mark.png'
+  questionMarkLogo = 'assets/icons/question-mark.png'
 
   constructor() {
   }

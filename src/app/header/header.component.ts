@@ -9,8 +9,8 @@ import {Router} from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  shipLogo = '/assets/images/logo/ship.jpg'
-  headerLogo = '/assets/images/logo/titleHeader.jpg'
+  shipLogo = 'assets/images/logo/ship.jpg'
+  headerLogo = 'assets/images/logo/titleHeader.jpg'
 
   constructor(private joyrideService: JoyrideService, private router: Router) {
   }

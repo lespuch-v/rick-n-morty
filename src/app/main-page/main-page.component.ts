@@ -7,23 +7,23 @@ import {Component, OnInit} from '@angular/core';
 })
 export class MainPageComponent implements OnInit {
 
-  rickLogo = '/assets/images/logo/ricklogo.png'
-  mainImage: string = '/assets/bg/1062176.jpg'
-  netflixLogo: string = '/assets/images/logo/netflix.svg'
-  hboLogo: string = '/assets/images/logo/HBO_Max_Logo.svg.png'
-  fuckU: string = '/assets/images/logo/fuck-u-rick.png'
-  mortyAndRick: string = '/assets/images/logo/mortyAndrick.png'
-  netflixLogoBTN: string = '/assets/images/logo/netflix-logo.png'
-  hboLogoBTN: string = '/assets/images/logo/hbo-logo.png'
+  rickLogo = 'assets/images/logo/ricklogo.png'
+  mainImage: string = 'assets/bg/1062176.jpg'
+  netflixLogo: string = 'assets/images/logo/netflix.svg'
+  hboLogo: string = 'assets/images/logo/HBO_Max_Logo.svg.png'
+  fuckU: string = 'assets/images/logo/fuck-u-rick.png'
+  mortyAndRick: string = 'assets/images/logo/mortyAndrick.png'
+  netflixLogoBTN: string = 'assets/images/logo/netflix-logo.png'
+  hboLogoBTN: string = 'assets/images/logo/hbo-logo.png'
 
   // Card images
-  cardImage_1 = '/assets/characters/rick.png'
-  cardImage_2 = '/assets/characters/Morty.jpg'
-  cardImage_3 = '/assets/characters/ship.jpg'
-  cardImage_4 = '/assets/characters/jerry-and-meeseeks.jpg'
-  cardImage_5 = '/assets/characters/pickle_rick.webp'
-  // cardImage_6 = '/assets/characters/633216.jpg'
-  cardImage_6 = '/assets/characters/beth.png'
+  cardImage_1 = 'assets/characters/rick.png'
+  cardImage_2 = 'assets/characters/Morty.jpg'
+  cardImage_3 = 'assets/characters/ship.jpg'
+  cardImage_4 = 'assets/characters/jerry-and-meeseeks.jpg'
+  cardImage_5 = 'assets/characters/pickle_rick.webp'
+  // cardImage_6 = 'assets/characters/633216.jpg'
+  cardImage_6 = 'assets/characters/beth.png'
 
   constructor() {
   }
