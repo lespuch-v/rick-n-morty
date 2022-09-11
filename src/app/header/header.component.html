@@ -1,7 +1,16 @@
-<div class="container" joyrideStep="step1" style="max-width: 1100px;">
+<div [stepContent]="joyRideStepOne" class="container" joyrideStep="step1" style="max-width: 1100px;"
+     title="Site navigation">
   <header
     class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"
     title="Hi, and welcome!">
+    <ng-template #joyRideStepOne>
+      <div style="max-width: 300px">
+        <p>In this section you will find site navigation. Such as <span class="search-word">Search </span>, <span
+          class="features-word"> Features</span>,
+          <span class="where-word"> Where to watch</span> <span class="faq-word"> FAQs</span> and <span
+            class="about-word">About</span></p>
+      </div>
+    </ng-template>
 
 
     <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none" href="/"
@@ -13,13 +22,20 @@
       <li class="nav-item"><a (click)="startTour()" aria-current="page"
                               class="nav-link active search-btn2 css-selector2 mx-2" style="cursor: pointer;">?</a>
       </li>
-      <li class="nav-item"><a aria-current="page" class="nav-link active search-btn css-selector" href="#"
-                              routerLink="/search">Search</a>
+      <li class="nav-item" style="overflow: auto"><a [stepContent]="searchBtn" aria-current="page"
+                                                     class="nav-link active search-btn css-selector"
+                                                     href="#" joyrideStep="step3" routerLink="/search">Search</a>
       </li>
       <li class="nav-item"><a class="nav-link" routerLink="/features">Features</a></li>
       <li class="nav-item"><a class="nav-link" href="#where-to-watch">Where to watch?</a></li>
       <li class="nav-item"><a class="nav-link" routerLink="/faq">FAQs</a></li>
       <li class="nav-item"><a class="nav-link" routerLink="/about">About</a></li>
     </ul>
+    <ng-template #searchBtn>
+      <div>
+        <p>You can find your favourite character here. Just type: Rick, Morty or Jerry.</p>
+        <p>There is option for <span style="font-weight: bolder">filters</span>.</p>
+      </div>
+    </ng-template>
   </header>
 </div>

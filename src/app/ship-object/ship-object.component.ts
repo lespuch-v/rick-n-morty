@@ -107,9 +107,10 @@ export class ShipObjectComponent implements OnInit {
     // renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setSize(600, 600);
     renderer.domElement.style.position = 'absolute';
-    renderer.domElement.style.top = '750px';
-    renderer.domElement.style.left = '400px';
-    document.body.appendChild(renderer.domElement);
+    renderer.domElement.style.top = '0px';
+    renderer.domElement.style.left = '0px';
+    renderer.domElement.style.backgroundColor = 'red'
+    // document.body.appendChild(renderer.domElement);
     this.controls = new OrbitControls(this.camera, renderer.domElement);
     this.controls.autoRotate = true;
     this.controls.enableZoom = true;

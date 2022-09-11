@@ -22,12 +22,14 @@
       "es2020",
       "dom"
     ],
-    "noImplicitAny": true,
+    "noImplicitAny": true
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    "strictTemplates": true,
+    "strictNullChecks": false,
+    "strictPropertyInitialization": false
   }
 }

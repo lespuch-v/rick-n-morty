@@ -134,3 +134,15 @@
   margin: 0 auto;
   background-color: yellow;
 }
+
+/*Main Image - Media Queries*/
+@media only screen and (max-width: 770px) {
+  .mainImage {
+    min-width: auto;
+    margin-top: 35px;
+  }
+
+  .main-container {
+    display: block;
+  }
+}

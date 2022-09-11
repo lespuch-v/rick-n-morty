@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 
 @Component({
@@ -7,6 +7,9 @@ import {HttpClient} from "@angular/common/http";
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
+  // @ts-ignore
+  @ViewChild('myInput') myInput: ElementRef<HTMLElement>
+  @ViewChild('srchBtn') srchBtn: ElementRef<HTMLElement>
   urlSearch = 'https://rickandmortyapi.com/api/character/?name=rick'
   generalFilters = ['Status', 'Species', 'Gender']; // ? ? ?
   statusFilters = ['Alive', 'Dead', 'unknown'];
@@ -23,7 +26,7 @@ export class SearchComponent implements OnInit {
   searchInput: string = "";
   errorMessage = '';
   showError = false;
-  currentFilters = []
+  examplevalue: string = 'rick'
 
   constructor(private http: HttpClient) {
     // this.getCharacterData()
@@ -97,6 +100,13 @@ export class SearchComponent implements OnInit {
     this.selectedStatus = ''
     this.selectedSpecies = ''
     this.showError = false
+  }
+
+  joyRideExample() {
+    this.searchInput = 'rick'
+    let btn: HTMLElement = this.srchBtn.nativeElement
+    btn.click()
+    console.log('joyRideExample')
   }
 
   // TODO: ADD FOOTER TO YOUR APP -- YOU ARE MISSING FOOTER

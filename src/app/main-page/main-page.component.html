@@ -1,12 +1,9 @@
 <div class="container py-4">
   <section style="overflow: auto">
-    <joyrideStep [stepContent]="joyContent5" joyrideStep="step5" stepPosition="center"></joyrideStep>
-    <ng-template #joyContent5>
-      <div><h1>Hello, this is your final step!</h1></div>
-    </ng-template>
+
   </section>
   <div class="p-5 mb-4 bg-light rounded-3 main-shadow">
-    <div class="parent">
+    <div class="parent main-container">
       <div class="div1">
         <h1 class="display-5 fw-bold name-title">Rick and Morty</h1>
         <p class="col-md-12 fs-4"><span class="names-characters">Rick and Morty</span> is a show created by <span
@@ -35,7 +32,6 @@
 
   <div class="row align-items-md-stretch">
     <div class="my-container">
-      <app-ship-object></app-ship-object>
     </div>
     <h1 id="where-to-watch">Where to watch</h1>
     <div class="col-md-6">
@@ -119,6 +115,8 @@
       </div>
     </div>
   </div>
+
+  <app-ship-object></app-ship-object>
 
   <div class="container">
     <footer class="py-3 my-4">
