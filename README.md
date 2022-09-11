@@ -1,5 +1,8 @@
 # RickAndMory
 
+<h1>Rick and Morty</h1>
+<h3>https://lespuch-v.github.io/rick-n-morty/</h3>
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.6.
 
 ## Development server
